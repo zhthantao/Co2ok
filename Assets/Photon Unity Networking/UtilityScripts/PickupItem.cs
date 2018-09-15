@@ -210,4 +210,13 @@ public class PickupItem : Photon.MonoBehaviour, IPunObservable
             this.gameObject.SetActive(true);
         }
     }
+
+    //Detect if a click occurs
+    public void OnMouseDown()
+    {
+        //Output to console the clicked GameObject's name and the following message. You can replace this with your own actions for when clicking the GameObject.
+        Debug.Log("I OnMouseDown. That's a score!");
+        Pickup();
+        //PhotonNetwork.player.AddScore(1);
+    }
 }

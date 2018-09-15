@@ -10,6 +10,8 @@ public class PickupDemoGui : MonoBehaviour
     public bool ShowTeams;
     public float DropOffset = 0.5f;
 
+    public Co2kGameLogic c2gameLogic;
+
 
 
     public void OnGUI()
@@ -67,7 +69,10 @@ public class PickupDemoGui : MonoBehaviour
 
             if (GUILayout.Button("to red"))
             {
-                PhotonNetwork.player.SetTeam(PunTeams.Team.red);
+                // PhotonNetwork.player.SetTeam(PunTeams.Team.red);
+
+                // Change to next level 
+                c2gameLogic.GameOver();
             }
             if (GUILayout.Button("to blue"))
             {
