@@ -45,4 +45,5 @@ MonoBehaviour:
   - GameOver
   - networkDestroy
   - GameReset
+  - GenerateFoodItems
   DisableAutoOpenWizard: 1

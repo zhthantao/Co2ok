@@ -143,14 +143,15 @@ public class PickupItem : Photon.MonoBehaviour, IPunObservable
         if (this.OnPickedUpCall != null)
         {
             // you could also skip callbacks for items that are not picked up by this client by using: if (this.PickupIsMine)
-            this.OnPickedUpCall.SendMessage("OnPickedUp", this);
+            // TODO ! Changed 
+            //this.OnPickedUpCall.SendMessage("OnPickedUp", this);
         }
 
 
         // setup a respawn (or none, if the item has to be dropped)
         if (SecondsBeforeRespawn <= 0)
         {
-            this.PickedUp(0.0f);    // item doesn't auto-respawn. must be dropped
+           // this.PickedUp(0.0f);    // item doesn't auto-respawn. must be dropped
         }
         else
         {

@@ -1117,7 +1117,7 @@ MonoBehaviour:
   ShowDropButton: 1
   ShowTeams: 1
   DropOffset: 0.6
-  c2gameLogic: {fileID: 790387748}
+  gameManagerLogic: {fileID: 0}
 --- !u!114 &790387748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,6 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044a2353b7a66b04d844c84d7dd093b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ojInst: {fileID: 0}
 --- !u!1 &889999871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,8 +2323,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 3
-  instantiationId: 3
+  viewIdField: 6
+  instantiationId: 6
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!1 &1478209370
