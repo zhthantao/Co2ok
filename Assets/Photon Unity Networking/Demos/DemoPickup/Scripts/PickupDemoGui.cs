@@ -64,6 +64,8 @@ public class PickupDemoGui : MonoBehaviour
                 foreach (PhotonPlayer player in teamPlayers)
                 {
                     GUILayout.Label("  " + player.ToStringFull() + " Score: " + player.GetScore());
+                    GUILayout.Label("  " + player.ToStringFull() + " Sum Score: " + player.GetSumScore());
+
                 }
             }
 

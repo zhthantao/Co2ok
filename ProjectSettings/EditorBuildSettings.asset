@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Co2k.unity
     guid: 9aedf72055bcdf8489e1b53f37a3ec3e
-  - enabled: 1
-    path: Assets/Scenes/Co2k2.unity
-    guid: c2de7aa7b4b18844687346c236431374
   m_configObjects: {}

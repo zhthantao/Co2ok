@@ -34,7 +34,7 @@ public class OnJoinedInstantiate : MonoBehaviour
             }
         }
 
-        if (this.PickUpToInstantiate != null)
+        if (this.PickUpToInstantiate != null && PhotonNetwork.isMasterClient)
         {
             foreach (GameObject o in this.PickUpToInstantiate)
             {
