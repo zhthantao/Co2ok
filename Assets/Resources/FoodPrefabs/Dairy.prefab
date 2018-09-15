@@ -24,8 +24,6 @@ GameObject:
   - component: {fileID: 65394688436961482}
   - component: {fileID: 114282562489944594}
   - component: {fileID: 114172078064677366}
-  - component: {fileID: 114554102051606928}
-  - component: {fileID: 114290409244123402}
   m_Layer: 0
   m_Name: Dairy
   m_TagString: Respawn
@@ -143,31 +141,3 @@ MonoBehaviour:
   clockwise: 1
   foodName: 
   category: 
---- !u!114 &114290409244123402
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1449732050669886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd354f1d6db2546479ec3e80718a0556, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114554102051606928
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1449732050669886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49a81ce8037f41540ac70f51e9a19d7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SecondsBeforeRespawn: 2
-  PickupOnTrigger: 0
-  PickupIsMine: 0
-  OnPickedUpCall: {fileID: 114290409244123402}
-  SentPickup: 0
-  TimeOfRespawn: 0

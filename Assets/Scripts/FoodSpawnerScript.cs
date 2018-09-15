@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FoodSpawnerScript : MonoBehaviour {
 
     public float objectScale;
     public GameObject ingredientsList;
-
     private GameObject gameBoard;
     private Queue<string> foodItemNameStack;
     public static bool runTheGame = false;
@@ -24,15 +24,22 @@ public class FoodSpawnerScript : MonoBehaviour {
 
         if (PhotonNetwork.isMasterClient && runTheGame)
         {
-            //SpawnFood();
+            SpawnFood();
 
-            Invoke("SpawnFood", timer);
+            //Invoke("SpawnFood", timer);
         }
     }
     public void runGame()
     {
         PhotonView photonView = PhotonView.Get(this);
         photonView.RPC("UpdateRunGame", PhotonTargets.All);
+    }
+
+    public void StopGame()
+    {
+        runTheGame = false;
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("UpdateStopGame", PhotonTargets.All);
     }
 
     private void SpawnFood()
@@ -69,5 +76,11 @@ public class FoodSpawnerScript : MonoBehaviour {
     void UpdateRunGame()
     {
         runTheGame = true;
+    }
+
+    [PunRPC]
+    void UpdateStopGame()
+    {
+        runTheGame = false;
     }
 }

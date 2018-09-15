@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class IngredientListScript : MonoBehaviour {
+public class IngredientListScript : MonoBehaviour
+{
 
     public string[] ingredients;
     public GameObject ingredientsUiPrefab;
@@ -11,10 +12,11 @@ public class IngredientListScript : MonoBehaviour {
 
     private List<GameObject> uiElements;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         uiElements = new List<GameObject>();
-		foreach(string ingredient in ingredients)
+        foreach (string ingredient in ingredients)
         {
             GameObject ingredientItem = Instantiate(ingredientsUiPrefab);
             ingredientItem.transform.SetParent(this.transform);
@@ -28,9 +30,28 @@ public class IngredientListScript : MonoBehaviour {
         ingredientCollected = new bool[ingredientUIElements.Length];
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void Reset()
+    {
+        for (int index = 0; index < ingredientUIElements.Length; index++)
+        {
+            if (ingredientCollected[index] == true)
+            {
+                GameObject uiElement = ingredientUIElements[index];
+                UnityEngine.UI.Text textElement = uiElement.GetComponentInChildren<UnityEngine.UI.Text>();
+                textElement.text = textElement.text.Substring(0, textElement.text.Length - 5);
+            }
+
+        }
+
+        ingredientCollected = new bool[ingredientUIElements.Length];
+
+
+    }
 }

@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 65394688436961482}
   - component: {fileID: 114282562489944594}
   - component: {fileID: 114172078064677366}
-  - component: {fileID: 114290409244123402}
   m_Layer: 0
   m_Name: Fruit
   m_TagString: Respawn
@@ -142,14 +141,3 @@ MonoBehaviour:
   clockwise: 1
   foodName: 
   category: 
---- !u!114 &114290409244123402
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1449732050669886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd354f1d6db2546479ec3e80718a0556, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

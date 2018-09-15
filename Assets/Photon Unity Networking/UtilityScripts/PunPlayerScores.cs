@@ -12,10 +12,14 @@ public static class ScoreExtensions
 {
     public static void SetScore(this PhotonPlayer player, int newScore)
     {
+        Debug.Log("Enter SetScore");
         Hashtable score = new Hashtable();  // using PUN's implementation of Hashtable
         score[PunPlayerScores.PlayerScoreProp] = newScore;
 
         player.SetCustomProperties(score);  // this locally sets the score and will sync it in-game asap.
+
+        Debug.Log(" SetScore = " + score);
+
     }
 
     public static void AddScore(this PhotonPlayer player, int scoreToAddToCurrent)
