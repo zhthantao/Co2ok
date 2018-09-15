@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.EventSystems;
 
 public class OnPickedUpScript : MonoBehaviour {
 
@@ -16,6 +15,4 @@ public class OnPickedUpScript : MonoBehaviour {
             Debug.Log("Someone else picked up something. Lucky!");
 	    }
 	}
-
-
 }

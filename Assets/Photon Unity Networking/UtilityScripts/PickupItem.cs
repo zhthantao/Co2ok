@@ -143,15 +143,14 @@ public class PickupItem : Photon.MonoBehaviour, IPunObservable
         if (this.OnPickedUpCall != null)
         {
             // you could also skip callbacks for items that are not picked up by this client by using: if (this.PickupIsMine)
-            // TODO ! Changed 
-            //this.OnPickedUpCall.SendMessage("OnPickedUp", this);
+            this.OnPickedUpCall.SendMessage("OnPickedUp", this);
         }
 
 
         // setup a respawn (or none, if the item has to be dropped)
         if (SecondsBeforeRespawn <= 0)
         {
-           // this.PickedUp(0.0f);    // item doesn't auto-respawn. must be dropped
+            this.PickedUp(0.0f);    // item doesn't auto-respawn. must be dropped
         }
         else
         {
@@ -210,14 +209,5 @@ public class PickupItem : Photon.MonoBehaviour, IPunObservable
         {
             this.gameObject.SetActive(true);
         }
-    }
-
-    //Detect if a click occurs
-    public void OnMouseDown()
-    {
-        //Output to console the clicked GameObject's name and the following message. You can replace this with your own actions for when clicking the GameObject.
-        Debug.Log("I OnMouseDown. That's a score!");
-        Pickup();
-        //PhotonNetwork.player.AddScore(1);
     }
 }

@@ -866,8 +866,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownerId: 0
   group: 0
-  OwnerShipWasTransfered: 0
   prefixBackup: -1
+  observed: {fileID: 0}
   synchronization: 2
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
@@ -877,7 +877,6 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 1
   instantiationId: 1
-  currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!23 &658603221
 MeshRenderer:
@@ -1108,8 +1107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownerId: 0
   group: 0
-  OwnerShipWasTransfered: 0
   prefixBackup: -1
+  observed: {fileID: 0}
   synchronization: 2
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
@@ -1119,7 +1118,6 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 2
   instantiationId: 2
-  currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &762808485
 MonoBehaviour:
@@ -1841,8 +1839,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownerId: 0
   group: 0
-  OwnerShipWasTransfered: 0
   prefixBackup: -1
+  observed: {fileID: 0}
   synchronization: 2
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
@@ -1852,7 +1850,6 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 3
   instantiationId: 3
-  currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!1 &1651454761
 GameObject:
@@ -2093,8 +2090,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownerId: 0
   group: 0
-  OwnerShipWasTransfered: 0
   prefixBackup: -1
+  observed: {fileID: 0}
   synchronization: 2
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
@@ -2104,7 +2101,6 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 4
   instantiationId: 4
-  currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!1 &1881684507
 GameObject:
@@ -2288,8 +2284,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownerId: 0
   group: 0
-  OwnerShipWasTransfered: 0
   prefixBackup: -1
+  observed: {fileID: 0}
   synchronization: 2
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
@@ -2299,7 +2295,6 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 5
   instantiationId: 5
-  currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &2048835245
 MonoBehaviour:
@@ -2322,47 +2317,29 @@ MonoBehaviour:
     InterpolateMoveTowardsAcceleration: 2
     InterpolateMoveTowardsDeceleration: 2
     InterpolateSpeedCurve:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: -1
+      - time: -1
         value: 0
         inSlope: 0
         outSlope: Infinity
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 0
         outSlope: 1
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 4
+      - time: 4
         value: 4
         inSlope: 1
         outSlope: 0
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
     ExtrapolateOption: 0
     ExtrapolateSpeed: 1
     ExtrapolateIncludingRoundTripTime: 1
