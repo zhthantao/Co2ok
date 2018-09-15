@@ -47,4 +47,5 @@ MonoBehaviour:
   - GameReset
   - GenerateFoodItems
   - DetroyGameObject
+  - UpdateRunGame
   DisableAutoOpenWizard: 1
