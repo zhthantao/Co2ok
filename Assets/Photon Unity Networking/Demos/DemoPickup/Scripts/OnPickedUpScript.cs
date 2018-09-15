@@ -9,7 +9,7 @@ public class OnPickedUpScript : MonoBehaviour {
 	    if (item.PickupIsMine)
 	    {
 	        Debug.Log("I picked up something. That's a score!");
-	        PhotonNetwork.player.AddScore(1);
+	        //PhotonNetwork.player.AddScore(1);
 	    }
 	    else
 	    {

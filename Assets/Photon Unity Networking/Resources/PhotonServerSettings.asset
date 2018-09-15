@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3758f8f58fdef43803eb9be1df0608, type: 3}
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
-  AppID: 39b3a5f6-424d-4947-9160-e5bf2c907e7b
+  AppID: 71f70984-0a2f-4d97-8c74-598ac7b44fff
   VoiceAppID: 
   ChatAppID: 
   HostType: 1
@@ -46,4 +46,5 @@ MonoBehaviour:
   - networkDestroy
   - GameReset
   - GenerateFoodItems
+  - CorrectFoodMovement
   DisableAutoOpenWizard: 1

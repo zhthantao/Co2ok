@@ -150,7 +150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IngredientsList: {fileID: 0}
   fallingSpeed: 0.4
-  gameBoardTransform: {fileID: 0}
   falling: 1
   clockwise: 1
   foodName: 
@@ -167,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SecondsBeforeRespawn: 2
-  PickupOnTrigger: 0
+  PickupOnTrigger: 1
   PickupIsMine: 0
   OnPickedUpCall: {fileID: 114290409244123402, guid: 0cc83ea9ea9c00d41b94209fbf92e26e,
     type: 2}

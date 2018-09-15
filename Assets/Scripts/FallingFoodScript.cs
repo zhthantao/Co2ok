@@ -64,10 +64,9 @@ public class FallingFoodScript : MonoBehaviour {
                 GameObject uiElement = IngredientsList.GetComponent<IngredientListScript>().ingredientUIElements[index];
                 UnityEngine.UI.Text textElement = uiElement.GetComponentInChildren<UnityEngine.UI.Text>();
                 textElement.text = textElement.text + " Done";
-
                 Destroy(this.gameObject);
             }
-            
+
         }
         
     }

@@ -43,8 +43,6 @@ public class FoodSpawnerScript : MonoBehaviour {
 
 
                 fallingFood.transform.SetParent(this.transform);
-
-
                 fallingFood.transform.localPosition = Vector3.zero;
                 fallingFood.transform.localScale = Vector3.one * objectScale;
                 FallingFoodScript fallingFoodScript = fallingFood.GetComponent<FallingFoodScript>();
@@ -53,7 +51,6 @@ public class FoodSpawnerScript : MonoBehaviour {
                 fallingFoodScript.clockwise = (Random.value > 0.5f);
                 fallingFoodScript.foodName = foodName;
                 fallingFoodScript.category = category;
-
                 fallingFoodScript.IngredientsList = ingredientsList;
 
 
@@ -68,9 +65,9 @@ public class FoodSpawnerScript : MonoBehaviour {
     [PunRPC]
     void GenerateFoodItems()
     {
-        if (PhotonNetwork.isMasterClient)
+        //if (PhotonNetwork.isMasterClient)
 
-        {
+       // {
             
             if (foodItemNameStack == null)
                 foodItemNameStack = gameBoard.GetComponent<GameBoardScript>().foodItemNameStack;
@@ -103,6 +100,7 @@ public class FoodSpawnerScript : MonoBehaviour {
                 gameBoard.GetComponent<GameBoardScript>().foodItemNameStack.Enqueue(foodName);
                 gameBoard.GetComponent<GameBoardScript>().foodItemCategoriesStack.Enqueue(category);
             }
-        }
+       // }
     }
+
 }
