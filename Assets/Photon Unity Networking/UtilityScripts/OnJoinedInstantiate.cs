@@ -55,4 +55,28 @@ public class OnJoinedInstantiate : MonoBehaviour
             }
         }
     }
+
+    public void GenerateNewRound()
+    {
+        if (this.PickUpToInstantiate != null)
+        {
+            foreach (GameObject o in this.PickUpToInstantiate)
+            {
+                Debug.Log("Instantiating: " + o.name);
+
+                Vector3 spawnPos = Vector3.up;
+                if (this.SpawnPositionPickUp != null)
+                {
+                    spawnPos = this.SpawnPositionPickUp.position;
+                }
+
+                Vector3 random = Random.insideUnitSphere;
+                random.y = 0;
+                random = random.normalized;
+                Vector3 itempos = spawnPos + this.PositionOffset * random;
+
+                PhotonNetwork.Instantiate(o.name, itempos, Quaternion.identity, 0);
+            }
+        }
+    }
 }

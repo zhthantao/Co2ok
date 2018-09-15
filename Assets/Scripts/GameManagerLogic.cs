@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Co2kGameLogic : MonoBehaviour {
+public class GameManagerLogic : MonoBehaviour {
     private bool gameOver;
-    private 
-
+    public OnJoinedInstantiate ojInst;
     // Use this for initialization
     void Start () {
         gameOver = false;
@@ -25,7 +24,6 @@ public class Co2kGameLogic : MonoBehaviour {
             //Debug.Log("Current Player score = " + PhotonNetwork.player.GetScore());
             Debug.Log("GameOver");
             gameOver = true;
-
         }
 
 
@@ -34,6 +32,8 @@ public class Co2kGameLogic : MonoBehaviour {
     {
         PhotonView photonView = PhotonView.Get(this);
         photonView.RPC("GameReset", PhotonTargets.All,"input");
+        ojInst.GenerateNewRound();
+
     }
 
 

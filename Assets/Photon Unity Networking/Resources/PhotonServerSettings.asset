@@ -44,4 +44,5 @@ MonoBehaviour:
   - TaggedPlayer
   - GameOver
   - networkDestroy
+  - GameReset
   DisableAutoOpenWizard: 1
