@@ -39,22 +39,33 @@ public class FoodSpawnerScript : MonoBehaviour {
                 string category = gameBoard.GetComponent<GameBoardScript>().foodItemCategoriesStack.Dequeue();
                 /*GameObject fallingFood = Instantiate((Resources.Load("FoodPrefabs/" + category, typeof(GameObject))) as GameObject);
                  */
-                GameObject fallingFood = PhotonNetwork.Instantiate("FoodPrefabs/" + category, this.transform.position - new Vector3(0, 100, 0), Quaternion.identity, 0);
+
+                object[] instanceData = new object[7];
+                instanceData[0] = Random.Range(0.2f, 1f);
+                instanceData[1] = (Random.value > 0.5f);
+                instanceData[2] = (Random.value > 0.5f);
+                instanceData[3] = foodName;
+                instanceData[4] = category;
+                instanceData[5] = this.name;
+                instanceData[6] = objectScale;
+
+                PhotonNetwork.Instantiate("FoodPrefabs/" + category, this.transform.position - new Vector3(0, 100, 0), Quaternion.identity, 0, instanceData);
+                //GameObject fallingFood = PhotonNetwork.Instantiate("FoodPrefabs/" + category, this.transform.position - new Vector3(0, 100, 0), Quaternion.identity, 0, instanceData);
 
 
-                fallingFood.transform.SetParent(this.transform);
+                //fallingFood.transform.SetParent(this.transform);
 
 
-                fallingFood.transform.localPosition = Vector3.zero;
-                fallingFood.transform.localScale = Vector3.one * objectScale;
-                FallingFoodScript fallingFoodScript = fallingFood.GetComponent<FallingFoodScript>();
-                fallingFoodScript.fallingSpeed = Random.Range(0.2f, 1f);
-                fallingFoodScript.falling = (Random.value > 0.5f);
-                fallingFoodScript.clockwise = (Random.value > 0.5f);
-                fallingFoodScript.foodName = foodName;
-                fallingFoodScript.category = category;
-
-                fallingFoodScript.IngredientsList = ingredientsList;
+                /* fallingFood.transform.localPosition = Vector3.zero;
+                 fallingFood.transform.localScale = Vector3.one * objectScale;
+                 FallingFoodScript fallingFoodScript = fallingFood.GetComponent<FallingFoodScript>();
+                 fallingFoodScript.fallingSpeed = Random.Range(0.2f, 1f);
+                 fallingFoodScript.falling = (Random.value > 0.5f);
+                 fallingFoodScript.clockwise = (Random.value > 0.5f);
+                 fallingFoodScript.foodName = foodName;
+                 fallingFoodScript.category = category;
+                 */
+                //fallingFoodScript.IngredientsList = ingredientsList;
 
 
 

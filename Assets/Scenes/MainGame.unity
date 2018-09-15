@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -252,7 +252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 238.24164, y: -362.5}
+  m_AnchoredPosition: {x: 171.25, y: -362.5}
   m_SizeDelta: {x: 300, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &166106865
@@ -575,8 +575,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 829.7249, y: -300}
-  m_SizeDelta: {x: 476.48328, y: 600}
+  m_AnchoredPosition: {x: 628.75, y: -300}
+  m_SizeDelta: {x: 342.5, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &329652829
 MonoBehaviour:
@@ -844,8 +844,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 295.74164, y: -50}
-  m_SizeDelta: {x: 591.4833, y: 100}
+  m_AnchoredPosition: {x: 228.75, y: -50}
+  m_SizeDelta: {x: 457.5, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &466177874
 MonoBehaviour:
@@ -885,7 +885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &477621512
 Transform:
   m_ObjectHideFlags: 0
@@ -989,7 +989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 313.24164, y: 45.00003}
+  m_AnchoredPosition: {x: 246.25, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502617874
@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 717310250}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09e4272782f6acf4eb2168f38b594c5a, type: 3}
   m_Name: 
@@ -1368,10 +1368,8 @@ MonoBehaviour:
   SpawnPosition: {fileID: 0}
   SpawnPositionPickUp: {fileID: 0}
   PositionOffset: 2
-  PrefabsToInstantiate:
-  - {fileID: 100002, guid: 1f109488cb155864c839538b4a5d2133, type: 2}
-  PickUpToInstantiate:
-  - {fileID: 1121143834101778, guid: 02dd99816d64b1e46a074fa138cac4f1, type: 2}
+  PrefabsToInstantiate: []
+  PickUpToInstantiate: []
 --- !u!114 &717310256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1828,7 +1826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1297246297
 Transform:
   m_ObjectHideFlags: 0
@@ -1882,8 +1880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 295.74164, y: -300}
-  m_SizeDelta: {x: 591.4833, y: 600}
+  m_AnchoredPosition: {x: 228.75, y: -300}
+  m_SizeDelta: {x: 457.5, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332272965
 MonoBehaviour:
@@ -1985,17 +1983,17 @@ MonoBehaviour:
   - Carrot
   - Apple
   foodItemCategories:
+  - Fruit
   - Vegetable
+  - Fruit
   - Vegetable
+  - Fruit
   - Vegetable
+  - Fruit
   - Vegetable
+  - Fruit
   - Vegetable
-  - Vegetable
-  - Vegetable
-  - Vegetable
-  - Vegetable
-  - Vegetable
-  - Vegetable
+  - Fruit
   - Vegetable
 --- !u!114 &1332272970
 MonoBehaviour:
@@ -2143,7 +2141,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 238.24164, y: -62.5}
+  m_AnchoredPosition: {x: 171.25, y: -62.5}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392153806
@@ -2298,7 +2296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1415221189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3213,8 +3211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 533.9833, y: -300}
-  m_SizeDelta: {x: 1067.9666, y: 600}
+  m_AnchoredPosition: {x: 400, y: -300}
+  m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120561153
 MonoBehaviour:

@@ -19,6 +19,25 @@ public class FallingFoodScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        PhotonView pV = transform.GetComponent<PhotonView>();
+
+        object[] data = pV.instantiationData;
+
+        fallingSpeed = (float)data[0];
+        falling = (bool)data[1];
+        clockwise = (bool)data[2];
+        foodName = (string)data[3];
+        category = (string)data[4];
+        string parentName = (string)data[5];
+        float scaling = (float)data[6];
+
+        IngredientsList = GameObject.Find("IngredientsList");
+
+        transform.SetParent(GameObject.Find(parentName).transform);
+
+        transform.localScale = Vector3.one * scaling;
+        transform.localPosition = Vector3.zero;
+
         gameBoardRectTransform = GameObject.Find("GameBoard").GetComponent<RectTransform>();
 
         uiPanelHeight = gameBoardRectTransform.sizeDelta.y + 100;
@@ -65,10 +84,20 @@ public class FallingFoodScript : MonoBehaviour {
                 UnityEngine.UI.Text textElement = uiElement.GetComponentInChildren<UnityEngine.UI.Text>();
                 textElement.text = textElement.text + " Done";
 
-                Destroy(this.gameObject);
+                PhotonView photonView = PhotonView.Get(this);
+                photonView.RPC("DetroyGameObject", PhotonTargets.All);
+                PhotonNetwork.player.AddScore(1);
             }
             
         }
         
+
+
+    }
+
+    [PunRPC]
+    void DetroyGameObject()
+    {
+        Destroy(this.gameObject);
     }
 }
