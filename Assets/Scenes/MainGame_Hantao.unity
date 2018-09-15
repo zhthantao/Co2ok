@@ -252,7 +252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 168.1384, y: -335}
+  m_AnchoredPosition: {x: 164.27484, y: -335}
   m_SizeDelta: {x: 300, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &166106865
@@ -364,7 +364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 483.66037, y: 45.00003}
+  m_AnchoredPosition: {x: 417.98, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &204566076
@@ -380,6 +380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 8
 --- !u!114 &204566077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,7 +434,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 6
   instantiationId: 6
@@ -602,8 +604,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 898.7366, y: -300}
-  m_SizeDelta: {x: 336.2768, y: 600}
+  m_AnchoredPosition: {x: 794.4208, y: -300}
+  m_SizeDelta: {x: 328.54968, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &329652829
 MonoBehaviour:
@@ -695,7 +697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80.21532, y: 45}
+  m_AnchoredPosition: {x: 76.351776, y: 45}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &350795328
@@ -745,6 +747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 9
 --- !u!114 &350795331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,7 +767,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 13
   instantiationId: 13
@@ -804,7 +808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 281.93784, y: 45.00003}
+  m_AnchoredPosition: {x: 247.16591, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439527980
@@ -820,6 +824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 8
 --- !u!114 &439527981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,7 +878,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 14
   instantiationId: 14
@@ -936,7 +942,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -946,7 +952,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Start
 --- !u!222 &447917833
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -998,8 +1004,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 365.2991, y: -50}
-  m_SizeDelta: {x: 730.5982, y: 100}
+  m_AnchoredPosition: {x: 315.07297, y: -50}
+  m_SizeDelta: {x: 630.14594, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &466177874
 MonoBehaviour:
@@ -1143,7 +1149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 332.36847, y: 45.00003}
+  m_AnchoredPosition: {x: 289.86945, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502617874
@@ -1159,6 +1165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 4
 --- !u!114 &502617875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,7 +1219,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 16
   instantiationId: 16
@@ -1272,7 +1280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044a2353b7a66b04d844c84d7dd093b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ojInst: {fileID: 717310255}
 --- !u!4 &565141166
 Transform:
   m_ObjectHideFlags: 0
@@ -1468,7 +1475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044a2353b7a66b04d844c84d7dd093b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ojInst: {fileID: 717310255}
 --- !u!114 &717310252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1713,7 +1719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 534.091, y: 45.00003}
+  m_AnchoredPosition: {x: 460.68353, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002356603
@@ -1729,6 +1735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 6
 --- !u!114 &1002356604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1782,7 +1789,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 15
   instantiationId: 15
@@ -1822,7 +1830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 181.07658, y: 45.00003}
+  m_AnchoredPosition: {x: 161.75883, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1075712575
@@ -1838,6 +1846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 5
 --- !u!114 &1075712576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1891,7 +1900,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 5
   instantiationId: 5
@@ -2082,8 +2092,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 365.2991, y: -300}
-  m_SizeDelta: {x: 730.5982, y: 600}
+  m_AnchoredPosition: {x: 315.07297, y: -300}
+  m_SizeDelta: {x: 630.14594, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332272965
 MonoBehaviour:
@@ -2343,7 +2353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 168.1384, y: -53.33333}
+  m_AnchoredPosition: {x: 164.27484, y: -53.33333}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392153806
@@ -2433,7 +2443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 382.7991, y: 45.00003}
+  m_AnchoredPosition: {x: 332.57297, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400799091
@@ -2449,6 +2459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 9
 --- !u!114 &1400799092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2502,7 +2513,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 4
   instantiationId: 4
@@ -2610,7 +2622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 584.52167, y: 45.00003}
+  m_AnchoredPosition: {x: 503.38705, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1436226972
@@ -2626,6 +2638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 7
 --- !u!114 &1436226973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,7 +2692,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 12
   instantiationId: 12
@@ -2719,7 +2733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 433.22974, y: 45.00003}
+  m_AnchoredPosition: {x: 375.2765, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589937912
@@ -2735,6 +2749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 4
 --- !u!114 &1589937913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2788,7 +2803,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 11
   instantiationId: 11
@@ -2828,7 +2844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 231.50722, y: 45.00003}
+  m_AnchoredPosition: {x: 204.46237, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1622899886
@@ -2844,6 +2860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 2
 --- !u!114 &1622899887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2897,7 +2914,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 10
   instantiationId: 10
@@ -2937,7 +2955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 685.3829, y: 45.00003}
+  m_AnchoredPosition: {x: 588.7941, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649065564
@@ -2953,6 +2971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 9
 --- !u!114 &1649065565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3006,7 +3025,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 9
   instantiationId: 9
@@ -3046,7 +3066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 634.9523, y: 45.00003}
+  m_AnchoredPosition: {x: 546.0906, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775726086
@@ -3062,6 +3082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 6
 --- !u!114 &1775726087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3115,7 +3136,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 8
   instantiationId: 8
@@ -3425,7 +3447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130.64595, y: 45.00003}
+  m_AnchoredPosition: {x: 119.0553, y: 45.00003}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2011468027
@@ -3441,6 +3463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectScale: 30
   ingredientsList: {fileID: 803916516}
+  timer: 5
 --- !u!114 &2011468028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3494,7 +3517,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 2
   instantiationId: 2
@@ -3534,7 +3558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 168.1384, y: -581.6666}
+  m_AnchoredPosition: {x: 164.27484, y: -581.6666}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2084638596
@@ -3718,8 +3742,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 533.4375, y: -300}
-  m_SizeDelta: {x: 1066.875, y: 600}
+  m_AnchoredPosition: {x: 479.3478, y: -300}
+  m_SizeDelta: {x: 958.6956, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120561153
 MonoBehaviour:

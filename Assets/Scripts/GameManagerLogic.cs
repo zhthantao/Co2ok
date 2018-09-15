@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class GameManagerLogic : MonoBehaviour {
     private bool gameOver;
-    public OnJoinedInstantiate ojInst;
+    private int gameTotalTimer;
     // Use this for initialization
     void Start () {
         gameOver = false;
+        gameTotalTimer = 18;
+        //if(PhotonNetwork.isMasterClient)
+       // {
+           // Invoke("GameOver", gameTotalTimer);
+       // }
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 
         if (!PhotonNetwork.inRoom)
         {
@@ -25,20 +30,16 @@ public class GameManagerLogic : MonoBehaviour {
             Debug.Log("GameOver");
             gameOver = true;
         }
-
-
     }
     public void GameOver()
     {
         PhotonView photonView = PhotonView.Get(this);
-        photonView.RPC("GameReset", PhotonTargets.All,"input");
-        //ojInst.GenerateNewRound();
-
+        photonView.RPC("GameReset", PhotonTargets.All);
     }
 
 
     [PunRPC]
-    void GameReset(string input)
+    void GameReset()
     {
         GameObject[] respawns;
         // Clean screen remaining objects 
@@ -51,6 +52,10 @@ public class GameManagerLogic : MonoBehaviour {
             }
         }
         PhotonNetwork.player.SetScore(0);
-        Debug.Log("get value input" + input);        
     }
+
+
+
+
+
 }

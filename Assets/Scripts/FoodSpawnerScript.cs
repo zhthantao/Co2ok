@@ -10,7 +10,7 @@ public class FoodSpawnerScript : MonoBehaviour {
     private GameObject gameBoard;
     private Queue<string> foodItemNameStack;
     public static bool runTheGame = false;
-
+    public int timer;
 
     // Use this for initialization
     void Start() {
@@ -19,11 +19,25 @@ public class FoodSpawnerScript : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
-        
-        if (PhotonNetwork.isMasterClient && runTheGame)
+    void Update()
+    {
 
+        if (PhotonNetwork.isMasterClient && runTheGame)
         {
+            //SpawnFood();
+
+            Invoke("SpawnFood", timer);
+        }
+    }
+    public void runGame()
+    {
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("UpdateRunGame", PhotonTargets.All);
+    }
+
+    private void SpawnFood()
+    {
+
             if (foodItemNameStack == null)
                 foodItemNameStack = gameBoard.GetComponent<GameBoardScript>().foodItemNameStack;
             if (gameObject.transform.childCount == 0 && foodItemNameStack.Count > 0)
@@ -47,15 +61,7 @@ public class FoodSpawnerScript : MonoBehaviour {
 
                 gameBoard.GetComponent<GameBoardScript>().foodItemNameStack.Enqueue(foodName);
                 gameBoard.GetComponent<GameBoardScript>().foodItemCategoriesStack.Enqueue(category);
-            }
-        }
-
-    }
-
-    public void runGame()
-    {
-        PhotonView photonView = PhotonView.Get(this);
-        photonView.RPC("UpdateRunGame", PhotonTargets.All);
+            }        
     }
 
 

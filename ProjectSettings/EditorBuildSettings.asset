@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Co2k.unity
     guid: 9aedf72055bcdf8489e1b53f37a3ec3e
   - enabled: 1
-    path: Assets/Scenes/MainGame.unity
-    guid: edcaaaafe4d07e345a7241d260d34402
+    path: Assets/Scenes/MainGame_Hantao.unity
+    guid: 5bdee485e9880614e94c72dcbd853011
   m_configObjects: {}
