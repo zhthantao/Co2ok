@@ -34,7 +34,7 @@ public class FoodSpawnerScript : MonoBehaviour {
                 foodItemNameStack = gameBoard.GetComponent<GameBoardScript>().foodItemNameStack;
             if (gameObject.transform.childCount == 0 && foodItemNameStack.Count > 0)
             {
-                Debug.Log("called GenerateFoodItems");
+                //Debug.Log("called GenerateFoodItems");
                 string foodName = foodItemNameStack.Dequeue();
                 string category = gameBoard.GetComponent<GameBoardScript>().foodItemCategoriesStack.Dequeue();
                 /*GameObject fallingFood = Instantiate((Resources.Load("FoodPrefabs/" + category, typeof(GameObject))) as GameObject);

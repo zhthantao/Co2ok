@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingFoodScript : MonoBehaviour {
+public class FallingFoodScript : MonoBehaviour
+{
 
     public GameObject IngredientsList;
 
@@ -17,8 +18,9 @@ public class FallingFoodScript : MonoBehaviour {
     private float uiPanelHeight;
     private Vector3 startPosition;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         gameBoardRectTransform = GameObject.Find("GameBoard").GetComponent<RectTransform>();
 
         uiPanelHeight = gameBoardRectTransform.sizeDelta.y + 100;
@@ -29,16 +31,19 @@ public class FallingFoodScript : MonoBehaviour {
             this.transform.localPosition = this.transform.localPosition - new Vector3(0, uiPanelHeight, 0);
             startPosition = this.transform.localPosition;
         }
-        
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-       if (falling) {
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (falling)
+        {
             if (Mathf.Abs(this.transform.localPosition.y - startPosition.y) > uiPanelHeight)
                 this.transform.localPosition = startPosition;
             this.transform.position = this.transform.position - new Vector3(0, fallingSpeed, 0);
-        } else
+        }
+        else
         {
             if (Mathf.Abs(this.transform.localPosition.y - startPosition.y) > uiPanelHeight)
                 this.transform.localPosition = startPosition;
@@ -64,10 +69,17 @@ public class FallingFoodScript : MonoBehaviour {
                 GameObject uiElement = IngredientsList.GetComponent<IngredientListScript>().ingredientUIElements[index];
                 UnityEngine.UI.Text textElement = uiElement.GetComponentInChildren<UnityEngine.UI.Text>();
                 textElement.text = textElement.text + " Done";
-                Destroy(this.gameObject);
             }
-
         }
-        
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("DetroyGameObject", PhotonTargets.All);
+        PhotonNetwork.player.AddScore(1);
+    }
+
+
+    [PunRPC]
+    void DetroyGameObject()
+    {
+        Destroy(this.gameObject);
     }
 }
