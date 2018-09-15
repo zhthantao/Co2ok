@@ -10,8 +10,6 @@ public class PickupDemoGui : MonoBehaviour
     public bool ShowTeams;
     public float DropOffset = 0.5f;
 
-    public GameManagerLogic gameManagerLogic;
-
 
 
     public void OnGUI()
@@ -64,17 +62,12 @@ public class PickupDemoGui : MonoBehaviour
                 foreach (PhotonPlayer player in teamPlayers)
                 {
                     GUILayout.Label("  " + player.ToStringFull() + " Score: " + player.GetScore());
-                    GUILayout.Label("  " + player.ToStringFull() + " Sum Score: " + player.GetSumScore());
-
                 }
             }
 
             if (GUILayout.Button("to red"))
             {
-                // PhotonNetwork.player.SetTeam(PunTeams.Team.red);
-
-                // Change to next level 
-                gameManagerLogic.GameOver();
+                PhotonNetwork.player.SetTeam(PunTeams.Team.red);
             }
             if (GUILayout.Button("to blue"))
             {

@@ -6,8 +6,6 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 public class PunPlayerScores : MonoBehaviour
 {
     public const string PlayerScoreProp = "score";
-    public const string PlayerSumScore = "sumScore";
-
 }
 
 public static class ScoreExtensions
@@ -16,11 +14,6 @@ public static class ScoreExtensions
     {
         Hashtable score = new Hashtable();  // using PUN's implementation of Hashtable
         score[PunPlayerScores.PlayerScoreProp] = newScore;
-
-        // Update sumScore
-        int currentSum = player.GetSumScore();
-        //Hashtable score = new Hashtable();  // using PUN's implementation of Hashtable
-        score[PunPlayerScores.PlayerSumScore] = currentSum;
 
         player.SetCustomProperties(score);  // this locally sets the score and will sync it in-game asap.
     }
@@ -33,16 +26,6 @@ public static class ScoreExtensions
         Hashtable score = new Hashtable();  // using PUN's implementation of Hashtable
         score[PunPlayerScores.PlayerScoreProp] = current;
 
-       // player.SetCustomProperties(score);  // this locally sets the score and will sync it in-game asap.
-
-
-        // Update sumScore
-        int currentSum = player.GetSumScore();
-        currentSum = currentSum + scoreToAddToCurrent;
-
-        //Hashtable score = new Hashtable();  // using PUN's implementation of Hashtable
-        score[PunPlayerScores.PlayerSumScore] = currentSum;
-
         player.SetCustomProperties(score);  // this locally sets the score and will sync it in-game asap.
     }
 
@@ -52,18 +35,6 @@ public static class ScoreExtensions
         if (player.CustomProperties.TryGetValue(PunPlayerScores.PlayerScoreProp, out score))
         {
             return (int) score;
-        }
-
-        return 0;
-    }
-
-
-    public static int GetSumScore(this PhotonPlayer player)
-    {
-        object score;
-        if (player.CustomProperties.TryGetValue(PunPlayerScores.PlayerSumScore, out score))
-        {
-            return (int)score;
         }
 
         return 0;

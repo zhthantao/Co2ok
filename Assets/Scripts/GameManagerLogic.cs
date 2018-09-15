@@ -32,7 +32,7 @@ public class GameManagerLogic : MonoBehaviour {
     {
         PhotonView photonView = PhotonView.Get(this);
         photonView.RPC("GameReset", PhotonTargets.All,"input");
-        ojInst.GenerateNewRound();
+        //ojInst.GenerateNewRound();
 
     }
 
